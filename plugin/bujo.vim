@@ -3,7 +3,7 @@
 " Version:      0.5
 
 " Get custom configs
-let g:bujo#todo_file_path = get(g:, "bujo#todo_file_path", $HOME . "/.cache/bujo")
+let g:bujo#todo_file_path = get(g:, "bujo#todo_file_path", $HOME . "/.local/share/bujo")
 let g:bujo#window_width = get(g:, "bujo#window_width", 30)
 
 " Make bujo directory if it doesn't exist"
@@ -81,4 +81,4 @@ if !exists(":Todo")
 endif
 
 " Update title upon file create. 
-autocmd bufnewfile todo.md call append(0, '#' . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
+autocmd bufnewfile todo.md call append(0, '# ' . split(expand('%:p:h:t'), '\v\n')[0] . "## todo")  
